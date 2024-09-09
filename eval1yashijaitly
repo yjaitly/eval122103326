@@ -1,0 +1,44 @@
+def addemp(empid, name, department, salary):
+    employees[empid] = {
+        'name': name,
+        'department': department,
+        'salary': salary
+    }
+    
+   
+    
+    
+    
+def updateemp(empid, name, department, salary):
+    if empid in employees:
+        if name:
+            employees[empid]['name'] = name
+        if department:
+            employees[empid]['department'] = department
+        if salary:
+            employees[empid]['salary'] = salary
+    else:
+        print(f"Employee with ID {empid} not found.")
+
+
+def searchemp(empid):
+    return employees.get(empid, f"Employee with ID {empid} not found.")
+
+employees = {
+    'empid':765,
+    'name':"xyz",
+    'department':"HR",
+    'salary':30000
+}
+addemp(123,"pqr","managment",10000)
+updateemp(456,"abc","managment",40000)
+searchemp(123)
+
+
+
+
+
+
+
+
+
